@@ -13,6 +13,16 @@ new Vue({
     },
 
     methods: {
+        // Milestone 3: Metodo per aggiungere un nuovo todo
+        addTodo() {
+            // Aggiungiamo il nuovo todo solo se l'input non è vuoto
+            if (this.newTodo.trim() !== '') {
+                // Aggiungiamo un nuovo oggetto 'todo' all'array 'todos'
+                this.todos.push({ text: this.newTodo, done: false });
+                // Resettiamo l'input dopo aver aggiunto il todo
+                this.newTodo = '';
+            }
+        },
 
         // Milestone 2: Metodo per rimuovere un todo dall'array
         removeTodo(index) {
