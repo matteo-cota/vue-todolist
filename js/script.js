@@ -12,5 +12,14 @@ new Vue({
         ]
     },
 
+    methods: {
+
+        // Milestone 2: Metodo per rimuovere un todo dall'array
+        removeTodo(index) {
+            // 'splice' rimuove l'elemento all'indice specificato
+            this.todos.splice(index, 1);
+        },
+    }
+
 
 });

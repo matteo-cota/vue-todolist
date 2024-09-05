@@ -16,13 +16,16 @@
         <ul class="list-group">                 
             <li v-for="(todo, index) in todos" :key="index" 
                 class="list-group-item d-flex justify-content-between align-items-center">
-                
+
                 <!-- Milestone 1: Se 'todo.done' è true, applichiamo una classe per sbarrarlo -->
                 <span @click="toggleDone(index)" 
                       :class="{ 'text-decoration-line-through': todo.done }"
                       class="todo-text">
                     {{ todo.text }} <!-- Visualizziamo il testo del todo -->
                 </span>
+                
+                <!-- Milestone 2: Pulsante 'x' per rimuovere il todo -->
+                <button class="btn btn-danger btn-sm" @click="removeTodo(index)">x</button>
             </li>
         </ul>
 
