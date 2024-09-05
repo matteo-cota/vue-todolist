@@ -29,7 +29,10 @@ new Vue({
             // 'splice' rimuove l'elemento all'indice specificato
             this.todos.splice(index, 1);
         },
+        // Bonus 2: Metodo per invertire lo stato 'done' di un todo
+        toggleDone(index) {
+            // Cambiamo il valore 'done' da true a false e viceversa
+            this.todos[index].done = !this.todos[index].done;
+        }
     }
-
-
 });
